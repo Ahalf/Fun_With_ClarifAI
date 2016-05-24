@@ -1,7 +1,7 @@
 from clarifai.client import ClarifaiApi
 from random import randint
 import pprint
-
+#include OAUTH requirements
 clarifai_api = ClarifaiApi()
 result = clarifai_api.tag_images([open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0835.JPG', 'rb'),
 	open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0851.JPG','rb'), open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0873.JPG', 'rb'), 
