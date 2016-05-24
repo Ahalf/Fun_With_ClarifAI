@@ -1,6 +1,6 @@
 from clarifai.client import ClarifaiApi
 from random import randint
-import pprint
+
 #include OAUTH requirements
 clarifai_api = ClarifaiApi()
 result = clarifai_api.tag_images([open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0835.JPG', 'rb'),
@@ -8,11 +8,9 @@ result = clarifai_api.tag_images([open('/Users/adamhalfaker/Documents/PhotosForA
 	open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0878.JPG', 'rb'), open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0912.JPG', 'rb'), 
 	open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0926.JPG', 'rb'), open('/Users/adamhalfaker/Documents/PhotosForAI/IMG_0943.JPG', 'rb')])
 
-pp = pprint.PrettyPrinter(indent=1)
 wordList = []
 finalWordList = []
 for i in range(7):
-	
 	listInput = result['results'][i]['result']['tag']['classes']
 	for i in range(len(listInput)-1):
 		if listInput[i] != 'no person':
